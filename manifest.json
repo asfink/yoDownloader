@@ -1,0 +1,17 @@
+{
+  "name": "yoDownload",
+  "description": "yo download is done!",
+  "version":"0.0",
+  "content_scripts":[{
+     "matches": ["http://*/*","https://*/*"],
+    "run_at": "document_end",         // pay attention to this line
+    "js":["contentscript.js","jquery.js"]
+    }],
+  "permissions": [
+  "storage",
+  "activeTab",
+  "downloads"
+  ],
+  "manifest_version": 2,
+  "options_page": "options.html"
+}
